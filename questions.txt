@@ -1,0 +1,85 @@
+Recursion 
+
+1. Recursion is when a function calls itself one or more times in its body.  With
+every recursive call, the solution of the problem is downsized and moves towards a 
+base case.  As the functions complete, the function close themselves back up. 
+
+2. It is necessary to have a base case otherwise your functions will continue 
+to call themselves and it will never know when to stop.  
+
+
+Graphs
+
+1. Graphs can have loops, can have many connections and the relationship between 
+nodes can either be directed or non-directred.  Graphs are often used to model
+relationships between things.    
+
+2. All trees can be graphs but not all graphs are trees.  Graphs can have loops
+and can be directed or non-directed while tree are only directed and are acyclic.
+Trees are hierarchial while graphs are not.  
+
+3. If you were trying to figure out what the cheapest way is to get from point a 
+to point b.  Each node would have the stop over destinations and the edges can
+have a weight of price.  
+
+
+Performance of different data structures
+
+
+Data Structure                 Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)            O(1)    O(n)    O(1)    O(n)    O(n)    O(1)
+Linked List                    O(n)    O(n)    O(1)    O(1)    O(1)    O(n)
+Doubly-Linked List             O(n)    O(n)    O(1)    O(1)    O(1)    O(1)         
+Queue (as Array)               X       X       O(1)    X       O(n)    X
+Queue (as LL or DLL)           X       X       O(1)    X       O(1)    X
+Stack (as Array, LL, or DLL)   X       X       O(1)    X       X       O(1)
+Deque (as DLL)                 X       X       O(1)    O(1)    O(1)    O(1) 
+
+
+
+Data Structure                Get     Add      Delete     Iterate     Memory
+Dictionary (Hash Map)         O(1)    O(1)     O(1)       O(n)        medium
+Set (Hash Map)                O(1)    O(1)     O(1)       O(n)        medium
+Binary Search Tree            O(logn) O(n)     O(n)       O(1)        little
+Tree                          O(n)    O(1)     O(1)       O(1)        little
+
+
+Sorting
+
+1. The first two numbers in the list are compared. If the first number is larger
+than the numbers swap positions, if not they remain in the same location. Than the
+second and third numbers in the list are compared and will do the same thing. Than
+the third and fourth, etc. 
+
+2. A list is broken down by half until each number is it's own list. The first
+and second lists compare to see which on is bigger and then combine into one sorted
+list.  Than the third and fourth list does the same things, etc until everyone is
+paired off and sorted.  Than the first pair and second pair get ready to be compared.
+The first number in each list compare and the one that is lower gets put in a new
+list.  Than the next first numbers in the list compare again and the lowest is added
+to the list.  It does that until all four numbers are sorted.  Than the next two
+pairs will do the same thing.  The lists will continue to merge until one sorted
+list is the final product. Divide and conquer method.   
+
+3. First we need to choose a number in the array to be our pivot. We than go
+through each number and put the numbers that are less than the pivot value to the
+left of the pivot and the numbers that are greater than the pivot value to the 
+right of the pivot. Now we recursively do the same thing to each side until the 
+list is fully sorted. Like merge sort it is also a divide a conquer method.  A lot
+of time as a matter of practice, the number with the highest index value is chosen
+as the pivot.  
+
+
+Git Branching
+
+1. You would use git branching if you have a functioning master copy but you are trying
+to change or add a new feature.  You can do a git branch which will give you an exact
+replica of the master and you can make your changes without affecting the master
+cooy.  If it doesn't work, it does not make a difference and if you want to keep
+your changes you can merge your branch with the master copy to make the changes
+permanent.  
+
+2. A pull request happens when someone has created a git branch, has made changes
+and has commited their work.  They can create a new pull request so that the owner
+of the repo can look at the changes that were made and can either ask them to 
+further make changes or can merge the changes with the master copy.    
